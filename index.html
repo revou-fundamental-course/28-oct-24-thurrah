@@ -1,9 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
-    <h1>Hello World Temang!</h1>
+
+<div class="container">
+    <div class="card">
+        <h2>Kalkulator BMI</h2>
+
+        <label for="gender">Jenis Kelamin</label>
+        <select id="gender">
+            <option value="">Pilih Jenis Kelamin</option>
+            <option value="Laki - Laki">Laki - Laki</option>
+            <option value="Perempuan">Perempuan</option>
+        </select>
+
+        <label for="weight">Berat Badan (kg):</label>
+        <input type="number" id="weight" placeholder="Masukkan Berat Badan (kg)" required>
+
+        <label for="age">Usia (tahun):</label>
+        <input type="number" id="age" placeholder="Masukkan Usia (tahun)" required>
+
+        <label for="height">Tinggi Badan (cm):</label>
+        <input type="number" id="height" placeholder="Masukkan Tinggi Badan (cm)" required>
+
+        <button class="calculate-btn" onclick="calculateBMI()">Hitung BMI</button>
+        <button class="reset-btn" onclick="resetFields()">Hapus</button>
+    </div>
+    
+    <div class="card">
+        <h2>Hasil BMI</h2>
+        <div id="result" class="result">Masukkan Data Anda Sesuai Kolom Kalkulator BMI.</div>
+    </div>
+</div>
+
 </body>
 </html>
