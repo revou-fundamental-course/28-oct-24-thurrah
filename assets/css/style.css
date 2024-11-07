@@ -1,0 +1,240 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling with gradient background and centered content */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6dd5fa, #2980b9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Main container layout for cards */
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+/* Paragraph styling inside card */
+.card p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Styling for paragraphs inside <article> elements within cards */
+.card article p {
+  padding: 10px 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Styling for span text inside cards */
+.card span {
+  display: block;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  color: #104799;
+  line-height: 1.4;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  background-color: #f1f6ff;
+}
+
+/* Adding space after line breaks inside card span */
+.card article span br {
+  margin-bottom: 5px;
+}
+
+/* Image styling in card */
+.card img {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+/* Removing bottom margin from the last paragraph in a card for consistency */
+.container .card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Styling for individual card with shadow and padding */
+.card {
+  width: 480px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Card header styling */
+.card header h2 {
+  font-size: 1.6em;
+  color: #104799;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+/* Label styling within card */
+.card label {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Input and select field styling */
+.card input,
+.card select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: #f7f8fa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effects for inputs and selects */
+.card input:focus,
+.card select:focus {
+  border-color: #104799;
+  box-shadow: 0 0 8px rgba(16, 71, 153, 0.15);
+  outline: none;
+}
+
+/* Button container styling */
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+/* Button styling with common properties */
+.card button {
+  width: 48%;
+  padding: 12px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Primary button with gradient background */
+.calculate-btn {
+  background: linear-gradient(135deg, #104799, #2980b9);
+}
+
+/* Hover effect for primary button */
+.calculate-btn:hover {
+  background: linear-gradient(135deg, #083d75, #1a5276);
+  transform: scale(1.05);
+}
+
+/* Secondary button with different color gradient */
+.reset-btn {
+  background: linear-gradient(135deg, #b11222, #d82e3f);
+}
+
+/* Hover effect for secondary button */
+.reset-btn:hover {
+  background: linear-gradient(135deg, #850b1a, #ac1f2c);
+  transform: scale(1.05);
+}
+
+/* Result display styling */
+.result {
+  font-size: 1.2em;
+  color: #104799;
+  font-weight: bold;
+  text-align: center;
+  padding: 45px;
+  line-height: 30px;
+  margin-top: 20px;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  background-color: #f1f6ff;
+}
+
+/* Footer styling */
+footer {
+  padding: 15px;
+  font-size: 1.2em;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Paragraph style for footer */
+footer p {
+  color: rgb(54, 44, 44);
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+/* Responsive Design for screens up to 768px wide */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  /* Adjust card width and padding for smaller screens */
+  .card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Adjust font size for headers on smaller screens */
+  .card header h2 {
+    font-size: 1.4em;
+  }
+
+  /* Adjust padding and font size of input and select elements */
+  .card input,
+  .card select {
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  /* Buttons span full width on smaller screens */
+  .card button {
+    width: 100%;
+  }
+
+  /* Adjust result font size and padding */
+  .result {
+    font-size: 1.1em;
+    padding: 10px;
+  }
+}
