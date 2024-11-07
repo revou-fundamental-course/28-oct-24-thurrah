@@ -1,43 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
-<div class="container">
-    <div class="card">
-        <h2>Kalkulator BMI</h2>
+    <main class="container">
+        <section class="card">
+            <header>
+                <h2>Kalkulator BMI</h2>
+            </header>
+            <article>
+                <p>Masukkan data Anda untuk menghitung BMI Anda, termasuk jenis kelamin, berat badan, usia, dan tinggi badan.</p>
+            </article>
+            <br>
 
-        <label for="gender">Jenis Kelamin</label>
-        <select id="gender">
-            <option value="">Pilih Jenis Kelamin</option>
-            <option value="Laki - Laki">Laki - Laki</option>
-            <option value="Perempuan">Perempuan</option>
-        </select>
+            <!-- Input fields with labels and placeholders -->
+            <label for="gender">Jenis Kelamin</label>
+            <select id="gender">
+                <option value="">Pilih Jenis Kelamin</option>
+                <option value="Laki - Laki">Laki - Laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
 
-        <label for="weight">Berat Badan (kg):</label>
-        <input type="number" id="weight" placeholder="Masukkan Berat Badan (kg)" required>
+            <label for="weight">Berat Badan (kg):</label>
+            <input type="number" id="weight" placeholder="Masukkan Berat Badan (kg)" required>
 
-        <label for="age">Usia (tahun):</label>
-        <input type="number" id="age" placeholder="Masukkan Usia (tahun)" required>
+            <label for="age">Usia (tahun):</label>
+            <input type="number" id="age" placeholder="Masukkan Usia (tahun)" required>
 
-        <label for="height">Tinggi Badan (cm):</label>
-        <input type="number" id="height" placeholder="Masukkan Tinggi Badan (cm)" required>
+            <label for="height">Tinggi Badan (cm):</label>
+            <input type="number" id="height" placeholder="Masukkan Tinggi Badan (cm)" required>
 
-        <button class="calculate-btn" onclick="calculateBMI()">Hitung BMI</button>
-        <button class="reset-btn" onclick="resetFields()">Hapus</button>
-    </div>
-    
-    <div class="card">
-        <h2>Hasil BMI</h2>
-        <div id="result" class="result">Masukkan Data Anda Sesuai Kolom Kalkulator BMI.</div>
-    </div>
-</div>
+            <div class="button-container">
+                <button class="calculate-btn" onclick="calculateBMI()">Hitung BMI</button>
+                <button class="reset-btn" onclick="resetFields()">Hapus</button>
+            </div>
 
+            <!-- Additional article information -->
+            <article>
+                <header>
+                    <h2>Form Information</h2>
+                </header>
+                <p>Pastikan data yang Anda masukkan benar untuk hasil yang akurat. BMI merupakan indikator kesehatan yang dapat
+                    membantu Anda memahami apakah berat badan Anda berada pada rentang normal atau tidak.</p>
+            </article>
+        </section>
+
+        <!-- Result card -->
+        <section class="card">
+            <header>
+                <h2>Hasil BMI</h2>
+            </header>
+            <div id="result" class="result">Hasil Kalkulasi</div>
+            <article>
+                <p>Indikator BMI memberikan gambaran mengenai berat badan yang sehat. BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh
+                    dan resiko penyakit seseorang. Jika Anda ingin informasi lebih lanjut, konsultasikan dengan ahli gizi atau profesional medis.</p>
+            </article>
+            <div>
+                <span>Beberapa penyakit yang berasal dari kegemukan <br>
+                    Diabetes <br>
+                    Hipertensi <br>
+                    Sakit Jantung <br>
+                    Osteoarthritis
+                </span>
+                <header>
+                    <h2>Download Aplikasi</h2>
+                </header>
+                <img src="assets/img/images.png" alt="Logo aplikasi kesehatan">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+       <p>Made by Fathur Rahman &copy; 2024</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
